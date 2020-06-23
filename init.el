@@ -12,6 +12,74 @@
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;;; Package
+
+;; ELPA settings
+(eval-when-compile (require 'cl))
+(when (require 'package nil t)
+	;; パッケージリポジトリに Marmalade ELPA を追加
+	;; (add-to-list 'package-archives
+	;;             '("ELPA" . "http://tromey.com/elpa/"))
+  (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+	;; インストールしたパッケージにロードパスを通して読み込む
+	(package-initialize)
+
+  ;; パッケージ情報の更新
+  (package-refresh-contents)
+
+  ;; インストールするパッケージ
+  (defvar nu/packages
+    '(
+      ;; init
+      init-loader
+
+      ;; python
+      jedi
+
+      ;; helm
+      helm
+      helm-ag
+      helm-descbinds
+      helm-ls-git
+      helm-c-yasnippet
+
+      ;; coding
+      web-mode
+      scss-mode
+      google-c-style
+      quickrun
+      markdown-mode
+      ruby-block
+      smart-compile
+
+      ;; org
+      org
+      org-plus-contrib
+
+      ;; other
+      yasnippet
+      open-junk-file
+      ;; auto-complete
+      key-chord
+      c-eldoc
+      wgrep
+      evernote-mode
+      paredit
+      company
+      elscreen
+      apel
+      smex
+      flim
+      ))
+  ;; インストールしていないパッケージをインストール
+  (dolist (package nu/packages)
+    (unless (package-installed-p package)
+      (package-install package)))
+  )
+
 ;;;
 ;;; org mode
 ;;;
@@ -99,3 +167,17 @@
 
 ;;; 上から挿入？？
 (setq org-reverse-note-order t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (smex wanderlust elscreen company paredit evernote-mode wgrep c-eldoc key-chord open-junk-file org-plus-contrib smart-compile ruby-block markdown-mode quickrun google-c-style scss-mode web-mode helm-c-yasnippet helm-ls-git helm-descbinds helm-ag helm jedi init-loader))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
