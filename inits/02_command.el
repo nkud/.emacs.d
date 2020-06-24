@@ -59,7 +59,7 @@
 
 ;;; 前方単語削除
 (defadvice kill-region (around kill-word-or-kill-region activate)
-  (if (and (interactive-p) transient-mark-mode (not mark-active))
+  (if (and (called-interactive-p) transient-mark-mode (not mark-active))
       (backward-kill-word 1)
     ad-do-it))
 (define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)
