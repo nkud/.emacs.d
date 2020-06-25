@@ -141,3 +141,6 @@
 
 ;;; undo
 (define-key global-map (kbd "C-z") 'undo)
+
+;; 右端折り返し
+(setq toggle-truncate-lines 1)
