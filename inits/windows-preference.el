@@ -35,10 +35,10 @@
 ;; (scroll-bar-mode -1)
 
 ;;; 初期フレームサイズ
-(setq initial-frame-alist (quote ((top . 10)
-                                  (left . 10)
+(setq initial-frame-alist (quote ((top . 20)
+                                  (left . 20)
                                   (width . 120)
-                                  (height . 40))))
+                                  (height . 30))))
 
 ;;; orgディレクトリを設定
 ;; (setq org-directory "D:/Dropbox/org")
