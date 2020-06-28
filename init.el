@@ -36,39 +36,29 @@
       ;; init
       init-loader                       ; 初期設定ファイルの管理
 
-      ;;;  python
-      ;; jedi
-
       ;; helm
       helm
+      helm-descbinds
+      helm-ls-git
+      helm-c-yasnippet
       ;; helm-ag
-      ;; helm-descbinds
-      ;; helm-ls-git
-      ;; helm-c-yasnippet
 
       ;; for coding
-      ;; web-mode
-      ;; scss-mode
+      web-mode
+      scss-mode
       google-c-style                    ; color theme
-      ;; quickrun
       markdown-mode
-      ;; ruby-block
-      ;; smart-compile
 
       ;; org
       org                               ; org mode
       org-plus-contrib
 
       ;; other
-      ;; yasnippet
+      yasnippet
       open-junk-file                    ; <F8> で一時ファイルを作成。拡張子を自由に設定できる。
-      ;; auto-complete
-      ;; key-chord
-      ;; c-eldoc
-      ;; wgrep
-      ;; evernote-mode
-      ;; paredit
-      ;; company
+      auto-complete
+      wgrep
+      company
       elscreen
       apel
       smex
