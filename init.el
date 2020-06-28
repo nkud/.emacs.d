@@ -34,7 +34,7 @@
   (defvar nu/packages
     '(
       ;; init
-      init-loader
+      init-loader                       ; 初期設定ファイルの管理
 
       ;;;  python
       ;; jedi
@@ -49,19 +49,19 @@
       ;; for coding
       ;; web-mode
       ;; scss-mode
-      google-c-style
+      google-c-style                    ; color theme
       ;; quickrun
       markdown-mode
       ;; ruby-block
       ;; smart-compile
 
       ;; org
-      org
+      org                               ; org mode
       org-plus-contrib
 
       ;; other
       ;; yasnippet
-      open-junk-file
+      open-junk-file                    ; <F8> で一時ファイルを作成。拡張子を自由に設定できる。
       ;; auto-complete
       ;; key-chord
       ;; c-eldoc
@@ -74,7 +74,7 @@
       smex
       flim
 
-      persistent-scratch
+      persistent-scratch                ; scratch 画面を保存
       ))
   ;; インストールしていないパッケージをインストール
   (dolist (package nu/packages)
