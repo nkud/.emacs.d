@@ -57,12 +57,12 @@
 ;; (global-set-key (kbd "M-r") 'search-repeat-with-char)
 ;;; --------------------------------------------------
 
-;;; 前方単語削除
-(defadvice kill-region (around kill-word-or-kill-region activate)
-  (if (and (called-interactive-p) transient-mark-mode (not mark-active))
-      (backward-kill-word 1)
-    ad-do-it))
-(define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)
+;;; 前方単語削除 <=== なぜかエラーになる
+;; (defadvice kill-region (around kill-word-or-kill-region activate)
+;;   (if (and (called-interactively-p) transient-mark-mode (not mark-active))
+;;       (backward-kill-word 1)
+;;     ad-do-it))
+;; (define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)
 
 ;;; --------------------------------------------------
 ;;; 折り返し
