@@ -36,43 +36,45 @@
       ;; init
       init-loader
 
-      ;; python
-      jedi
+      ;;;  python
+      ;; jedi
 
       ;; helm
       helm
-      helm-ag
-      helm-descbinds
-      helm-ls-git
-      helm-c-yasnippet
+      ;; helm-ag
+      ;; helm-descbinds
+      ;; helm-ls-git
+      ;; helm-c-yasnippet
 
-      ;; coding
-      web-mode
-      scss-mode
+      ;; for coding
+      ;; web-mode
+      ;; scss-mode
       google-c-style
-      quickrun
+      ;; quickrun
       markdown-mode
-      ruby-block
-      smart-compile
+      ;; ruby-block
+      ;; smart-compile
 
       ;; org
       org
       org-plus-contrib
 
       ;; other
-      yasnippet
+      ;; yasnippet
       open-junk-file
       ;; auto-complete
-      key-chord
-      c-eldoc
-      wgrep
-      evernote-mode
-      paredit
-      company
+      ;; key-chord
+      ;; c-eldoc
+      ;; wgrep
+      ;; evernote-mode
+      ;; paredit
+      ;; company
       elscreen
       apel
       smex
       flim
+
+      persistent-scratch
       ))
   ;; インストールしていないパッケージをインストール
   (dolist (package nu/packages)
@@ -88,3 +90,21 @@
 
 ;; ;;; org-agendaを起動
 ;; (org-agenda nil "a")
+
+
+(persistent-scratch-setup-default)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(helm-command-prefix-key "C-;")
+ '(package-selected-packages
+   (quote
+    (persistent-scratch wgrep web-mode wanderlust smex smart-compile scss-mode ruby-block quickrun paredit org-plus-contrib open-junk-file markdown-mode key-chord jedi init-loader helm-ls-git helm-descbinds helm-c-yasnippet helm-ag google-c-style evernote-mode elscreen company c-eldoc))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
