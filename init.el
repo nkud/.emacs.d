@@ -38,31 +38,31 @@
 
       ;; helm
       helm
-      helm-descbinds
-      helm-ls-git
-      helm-c-yasnippet
+      ;; helm-descbinds
+      ;; helm-ls-git
+      ;; helm-c-yasnippet
       ;; helm-ag
 
       ;; for coding
-      web-mode
-      scss-mode
-      google-c-style                    ; color theme
-      markdown-mode
+      ;; web-mode
+      ;; scss-mode
+      ;; google-c-style                    ; color theme
+      ;; markdown-mode
 
       ;; org
       org                               ; org mode
       org-plus-contrib
 
       ;; other
-      yasnippet
+      ;; yasnippet
       open-junk-file                    ; <F8> で一時ファイルを作成。拡張子を自由に設定できる。
-      auto-complete
-      wgrep
-      company
+      ;; auto-complete
+      ;; wgrep
+      ;; company
+      apel                              ; for elscreen
+      smex                              ; for elscreen
+      flim                              ; for elscreen
       elscreen
-      apel
-      smex
-      flim
 
       persistent-scratch                ; scratch 画面を保存
       ))
@@ -76,7 +76,7 @@
 ;;; init-loader
 (require 'init-loader)
 (setq init-loader-show-log-after-init 'error-only)  ;エラー時のみ表示
-(init-loader-load (locate-user-emacs-file "inits")) ;ディレクトリを設定j
+(init-loader-load (locate-user-emacs-file "inits")) ;ディレクトリを設定
 
 ;; ;;; org-agendaを起動
 ;; (org-agenda nil "a")
