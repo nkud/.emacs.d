@@ -39,8 +39,8 @@
   ;;   (space-chord-define-global "m" 'helm-M-x))
   )
 
-(require 'helm-ls-git)
-(require 'helm-c-yasnippet)
+;; (require 'helm-ls-git)
+;; (require 'helm-c-yasnippet)
 
 ;; (when (require 'helm-gtags nil t)
 ;;   (add-hook 'c-mode-hook 'helm-gtags-mode)
